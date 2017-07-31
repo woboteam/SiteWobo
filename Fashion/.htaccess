@@ -1,0 +1,20 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^trang-chu index.php
+RewriteRule ^lien-he lienhe.php
+RewriteRule ^tin-tuc/page-(.+)$ news.php?page=$1 [NC,L]
+RewriteRule ^rao-vat/page-(.+)$ ad.php?page=$1 [NC,L]
+RewriteRule ^gioi-thieu gioithieu.php
+RewriteRule ^qui-trinh-thue-xe stackcar.php
+RewriteRule ^hinh-thuc-thanh-toan hinhthuc.php
+RewriteRule ^hoi-dap fqa.php
+RewriteRule ^thoi-trang/([a-zA-Z0-9_-]+)$ product.php?cate_slug=$1 [NC,L]
+RewriteRule ^thoitrang/([a-zA-Z0-9_-]+)$ product_cate_cap1.php?cate_slug=$1 [NC,L]
+RewriteRule ^categories/([a-zA-Z0-9_-]+)-(.+)/page-(.+)$ allcar.php?cate_slug=$1&cate_id=$2&page=$3 [NC,L]
+RewriteRule ^views/([a-zA-Z0-9_-]+)-(.+)\.html$ detail_product.php?pro_slug=$1&pro_id=$2 [NC,L]
+RewriteRule ^xem-rao-vat/([a-zA-Z0-9_-]+)-(.+)\.html$ detailad.php?ad_slug=$1&ad_id=$2 [NC,L]
+RewriteRule ^xem-tin-tuc/([a-zA-Z0-9_-]+)-(.+)\.html$ detailnews.php?new_slug=$1&new_id=$2 [NC,L]
+#ErrorDocument 404 http://localhost:88/t3/project/thueXe/thue-xe/notfound.php
+ErrorDocument 404 http://localhost:81/Fashion/notfound.php
+						
